@@ -5,18 +5,37 @@ body{
   font-weight: 500
 }
 .Header{
-  display: flex;
   position: absolute;
+  width: 100%;
+}
+.Header{
   padding-top: 20px;
   padding-bottom:20px;
-  width: 100%;
-  justify-content:space-between;
 }
 .Header-logo{
   display: block;
   height: 20px;
   width: auto;
-  padding-left: 20px;
+}
+@media screen and (min-width: 768px){
+  .Header-logo{
+    transition: opacity .2s;
+  }
+}
+@media screen and (max-width: 1080px){
+  .HeaderNavHamburger jsc-hamburger{
+    cursor:pointer;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 21px;
+    z-index:100;
+  }
+}
+@media screen and (max-width: 1080px){
+.Header{
+    position: fixed !important;
+}
 }
 a{
   color: black;
@@ -25,7 +44,7 @@ a{
 .HeaderContainer{
   display: flex;
   justify-content:space-between;
-  margin:36px;
+  margin:0 36px;
   max-width: 100%;
   position: relative
 }
@@ -84,6 +103,14 @@ main{
   margin-bottom: 70px;
   width: fit-content;
 }
+.FirstViewContent-images img{
+  margin-right:8px;
+}
+img{
+  vertical-align:middle;
+  border:0;
+}
+
 .FirstViewContent-title{
   color: black;
   font-size: 38px;
@@ -95,6 +122,7 @@ main{
 }
 .FirstViewContent-buttons{
   display: flex;
+  margin-top:20px;
 }
 .FirstViewContent-buttons a:first-of-type{
   margin-right: 15px;
@@ -108,6 +136,7 @@ main{
 }
 .FirstViewContent-buttons a{
   align-items:center;
+  color:white;
   background-color: orange;
   border:none;
   border-radius: 38px;
@@ -121,6 +150,7 @@ main{
 .FirstViewCaption{
   color: #a2a2a4;
   font-size: 12px;
+  padding-bottom:20px;
 }
 .FirstViewCaption a{
   color: #a2a2a4;
@@ -178,6 +208,42 @@ main{
 .About-button>img{
   margin-right:5px;
 }
+@media screen and (max-width: 1024px){ 
+.About-video{
+    margin-bottom: 16px;
+    width: 75%;
+  }
+}
+@media screen and (max-width: 1024px){
+.About{
+  flex-direction:column;
+  }
+}
 @media screen and (max-width: 480px){
-  
+.About-title{
+  margin-left: 0;
+  width:75%;
+  }
+}
+@media screen and (max-width: 1080px){ 
+  .HeaderNavHamburger-Line:first-child{
+    top:0;
+  }
+}
+@media screen and (max-width: 1080px){ 
+  .HeaderNavHamburger-Line{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height:3px;
+    background-color: #333;
+    transform: translate(0,-50%);
+    border-radius: 10px;
+    transition: top .2s,transform .2s,opacity .3s;
+  }
+}
+@media screen and (max-width: 1080px){
+.HeaderNavHamburger-Line:last-child {
+    top: 100%;
+}
 }
