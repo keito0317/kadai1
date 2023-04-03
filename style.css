@@ -235,17 +235,32 @@ img{
 .About-button>img{
   margin-right:5px;
 }
-
-.HeaderNavListItem__button:hover{
+.FixedFooter {
+    bottom: 28px;
+    position: fixed;
+    right: 4px;
+    z-index: 10;
+}
+.FixedFooter img {
+    cursor: pointer;
+    display: block;
+    max-width: 367px;
+}
+.HeaderNavListItem-button:hover{
     opacity: .8;
 }
-.HeaderNavListItem__link:hover{
+.HeaderNavListItem-Link:hover{
     display: block;
     opacity: .8;
 }
 .HeaderLogo:hover{
     transition: opacity .2s;
     opacity: .8;
+}
+@media screen and (min-width: 768px){
+.FirstViewContent-buttons a:hover {
+    opacity: .8;
+}
 }
 @media screen and (max-width: 767px){
 .Header {
